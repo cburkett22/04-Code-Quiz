@@ -51,6 +51,13 @@ body {
     font-weight: 500;
 }
 
+hr {
+    position: relative;
+    border: none;
+    height: 3px;
+    background: black;
+}
+
 /*-------------------------------------*/
 
 /* Start Button */
@@ -62,4 +69,27 @@ body {
     background-image: linear-gradient(to bottom right, rgb(34, 243, 44) , rgb(19, 113, 236));
     padding: 20px 40px;
     text-align: center;
+}
+
+/*-------------------------------------*/
+
+/* Question Card Layout */
+
+.questLayout {
+    text-align: center;
+    padding: 10px;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.btnLayout {
+    font-family: Georgia;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 300;
+    border-radius: 25px;
+    background-image: linear-gradient(to bottom right, rgb(116, 55, 173) , rgb(196, 25, 181));
+    max-width: 100%;
+    max-height: 50px;
+
 }
