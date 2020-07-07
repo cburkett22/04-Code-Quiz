@@ -27,24 +27,24 @@ startBtn.addEventListener('click', function startQuiz() {
     document.getElementById('q1-c3').innerHTML = "<p>C. Variable</p>";
     document.getElementById('q1-c4').innerHTML = "<p>D. For Loop</p>";
 
-    let correctAns1 = document.getElementById('q1-c2');
-    let incorrectAns1 = document.getElementById('q1-c1');
+    let correctAnsEl = document.getElementsByClassName('correct-1');
+    let incorrectAnsEl = document.getElementsByClassName('incorrect-1');
     let qTwoEl = document.getElementById('question-2');
-    let selection1 = document.getElementById('choices-1');
+    let choicesEl = document.getElementById('choices-1');
 
-    selection1.addEventListener('click', function() {
-        if (correctAns1 = true) {
+    choicesEl.addEventListener('click', function() {
+        console.log(this.getAttribute('class'));
+        if (correctAnsEl = true) {
             alert('CORRECT!');
             qOneEl.style.display = "none";
             qTwoEl.style.display = "contents";
-        } else if (incorrectAns1 = true) {
+        } else if (incorrectAnsEl = true) {
             alert('Sorry, that was incorrect.');
             qOneEl.style.display = "none";
             qTwoEl.style.display = "contents";
         }
     });
         
-    
     // correctAns1.addEventListener('click', function() {
     //     alert("CORRECT!");
     //     qOneEl.style.display = "none";
@@ -118,56 +118,36 @@ startBtn.addEventListener('click', function startQuiz() {
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // questionOne: "A _______ is an error in a program that prevents the program from running as expected.",
 // questionTwo: "What does a for loop do?",
 // questionThree: "A _______ is a placeholder for a piece of information that can change.",
 // questionFour: "blah blah blah??",
 // questionFive: "blah blah blah??"
 
-let questions = [
-    {
-        question: "1. A _______ is an error in a program that prevents the program from running as expected.",
-        choices: ["A", "B", "C", "D"],
-        correctAns: "B"
-    },
-    {
-        question: "2. What does a for loop do?",
-        choices: ["A", "B", "C", "D"],
-        correctAns: "C"
-    },
-    {
-        question: "3. A _______ is a placeholder for a piece of information that can change.",
-        choices: ["A", "B", "C", "D"],
-        correctAns: "A"
-    },
-    {
-        question: "",
-        choices: ["A", "B", "C", "D"],
-        correctAns: "C"
-    },
-    {
-        question: "",
-        choices: ["A", "B", "C", "D"],
-        correctAns: "D"
-    }
-    ];
+// let questions = [
+//     {
+//         question: "1. A _______ is an error in a program that prevents the program from running as expected.",
+//         choices: ["A", "B", "C", "D"],
+//         correctAns: "B"
+//     },
+//     {
+//         question: "2. What does a for loop do?",
+//         choices: ["A", "B", "C", "D"],
+//         correctAns: "C"
+//     },
+//     {
+//         question: "3. A _______ is a placeholder for a piece of information that can change.",
+//         choices: ["A", "B", "C", "D"],
+//         correctAns: "A"
+//     },
+//     {
+//         question: "",
+//         choices: ["A", "B", "C", "D"],
+//         correctAns: "C"
+//     },
+//     {
+//         question: "",
+//         choices: ["A", "B", "C", "D"],
+//         correctAns: "D"
+//     }
+//     ];
