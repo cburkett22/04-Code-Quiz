@@ -17,41 +17,42 @@
         </nav>
         
     </div>
-
+    <!--Start page-->
     <div class="container-fluid-2">
         <div id="start">
             <h1>CODE QUIZ</h1>
             <hr><br>
-            <p>You have 75 seconds to complete 5 questions.</p>
+            <p>You have 30 seconds to complete 5 questions.</p>
             <p>Please press "START" to begin.</p><br>
             <p>Good luck!</p>
             <br><br>
             <button id="startBtn">START</button>
-            <!--What does "onclick='startQuiz()'" do?-->
         </div>
         <div id="quiz">
+            <!--Question 1-->
             <div id="question-1" style="display: none;">
                 <br>
                 <p class="questLayout" id="p1"></p>
                 <div id="choices-1">
                     <br>
                     <div>
-                        <button class="btnLayout incorrect-1" id="q1-c1"></button>
+                        <button class="btnLayout" id="q1-c1"></button>
                     </div>
                     <br>
                     <div>
-                        <button class="btnLayout correct-1" data-correct="true" id="q1-c2"></button>
+                        <button class="btnLayout" id="q1-c2"></button>
                     </div>
                     <br>
                     <div>
-                        <button class="btnLayout incorrect-1" data-incorrect="true" id="q1-c3"></button>
+                        <button class="btnLayout" id="q1-c3"></button>
                     </div>
                     <br>
                     <div>
-                        <button class="btnLayout incorrect-1" id="q1-c4"></button>
+                        <button class="btnLayout" id="q1-c4"></button>
                     </div>
                 </div>
             </div>
+            <!--Question 2-->
             <div id="question-2" style="display: none;">
                 <br>
                 <p class="questLayout" id="p2"></p>
@@ -74,6 +75,7 @@
                     </div>
                 </div>
             </div>
+            <!--Question 3-->
             <div id="question-3" style="display: none;">
                 <br>
                 <p class="questLayout" id="p3"></p>
@@ -96,6 +98,7 @@
                     </div>
                 </div>
             </div>
+            <!--Question 4-->
             <div id="question-4" style="display: none;">
                 <br>
                 <p class="questLayout" id="p4"></p>
@@ -118,6 +121,7 @@
                     </div>
                 </div>
             </div>
+            <!--Question 5-->
             <div id="question-5" style="display: none;">
                 <br>
                 <p class="questLayout" id="p5"></p>
@@ -139,6 +143,22 @@
                         <button class="btnLayout" id="q5-c4"></button>
                     </div>
                 </div>
+            </div>
+            <!--Users score-->
+            <div id="score" style="display: none;">
+                <h1>SCORE</h1>
+                <hr><br>
+                <p>Enter your initials:</p>
+
+                <div id="text-div">
+                    <input type="text" id="textbox" style="text-align: center;">
+                </div>
+
+                <br>
+                <p>Highscores:</p>
+                <br>
+                <p id="counter"></p>
+
             </div>
         </div>
     </div>

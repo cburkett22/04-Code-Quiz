@@ -58,6 +58,17 @@ hr {
     background: black;
 }
 
+#score {
+    text-align: center;
+    padding: 10px;
+    font-size: 26px;
+    font-weight: 500;
+}
+
+#text-div {
+    text-align: center;
+}
+
 /*-------------------------------------*/
 
 /* Start Button */
