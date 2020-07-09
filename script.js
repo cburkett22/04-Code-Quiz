@@ -1,4 +1,4 @@
-let secondsLeft = 10;
+let secondsLeft = 30;
 let timeEl = document.querySelector('#timer');
 let startBtn = document.querySelector('#startBtn');
 
