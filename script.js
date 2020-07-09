@@ -1,7 +1,13 @@
-let secondsLeft = 30;
+let secondsLeft = 75;
 let timeEl = document.querySelector('#timer');
-
 let startBtn = document.querySelector('#startBtn');
+
+let incorrectAnsEl = document.getElementsByClassName('incorrect-1');
+let qTwoEl = document.getElementById('question-2');
+let choicesEl = document.getElementsByClassName('btnLayout');
+let correctBtn = document.getElementsByTagName('button')[2].getAttribute('data-correct');
+let incorrectBtn = document.getElementsByTagName('button')[3].getAttribute('data-incorrect');
+console.log(correctBtn);
 
 startBtn.addEventListener('click', function startQuiz() {
     let timerInterval = setInterval(function() {
@@ -26,29 +32,36 @@ startBtn.addEventListener('click', function startQuiz() {
     document.getElementById('q1-c2').innerHTML = "<p>B. Bug</p>";
     document.getElementById('q1-c3').innerHTML = "<p>C. Variable</p>";
     document.getElementById('q1-c4').innerHTML = "<p>D. For Loop</p>";
+    
+    // let correctAnsEl = document.getAttribute('data-correct');
 
-    let correctAnsEl = document.getElementsByClassName('correct-1');
-    let incorrectAnsEl = document.getElementsByClassName('incorrect-1');
-    let qTwoEl = document.getElementById('question-2');
-    let choicesEl = document.getElementById('choices-1');
+    // Issues:
+    // - Parent/ child relationship inside HTML with div and "choice" buttons
+    // - Asynchronous behaivor (line 43) .addEventListener is not registering as a function, but choicesEl IS working.
+    // - I want "data-correct" to be the correct choices and "data-incorrect" will be incorrect choices
+    
+     console.log(correctBtn);
 
     choicesEl.addEventListener('click', function() {
-        console.log(this.getAttribute('class'));
-        if (correctAnsEl = true) {
+        console.log(correctBtn);
+        if (correctBtn) {
             alert('CORRECT!');
             qOneEl.style.display = "none";
             qTwoEl.style.display = "contents";
-        } else if (incorrectAnsEl = true) {
+        } else {
             alert('Sorry, that was incorrect.');
             qOneEl.style.display = "none";
             qTwoEl.style.display = "contents";
         }
     });
-        
-    // correctAns1.addEventListener('click', function() {
-    //     alert("CORRECT!");
-    //     qOneEl.style.display = "none";
-    //     qTwoEl.style.display = "contents";
+
+    // choicesEl.addEventListener('click', function() {
+    //     if (incorrectAnsEl = true) {
+    //         console.log(incorrectAnsEl);
+    //         alert('Sorry, that was incorrect.');
+    //         qOneEl.style.display = "none";
+    //         qTwoEl.style.display = "contents";
+    //     }
     // });
 
     // QUESTION 2
@@ -118,11 +131,7 @@ startBtn.addEventListener('click', function startQuiz() {
 });
 
 
-// questionOne: "A _______ is an error in a program that prevents the program from running as expected.",
-// questionTwo: "What does a for loop do?",
-// questionThree: "A _______ is a placeholder for a piece of information that can change.",
-// questionFour: "blah blah blah??",
-// questionFive: "blah blah blah??"
+
 
 // let questions = [
 //     {
