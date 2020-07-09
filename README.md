@@ -8,7 +8,7 @@ This homework assignment has taught me more than any other one I have recieved. 
 
 # Issues
 
-1. I was not able to get the "View Highscores" link to redirect the page to the "score" <div>.
+1. I was not able to get the "View Highscores" link to redirect the page to the "score" div.
 
 2. I was able to get my timer to work, as well as ALERT when = 0, but was not able to get the timer to stop if the quiz was completed before the timer reached 0.
 
