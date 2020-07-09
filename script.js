@@ -1,10 +1,10 @@
-let secondsLeft = 30;
+let secondsLeft = 10;
 let timeEl = document.querySelector('#timer');
 let startBtn = document.querySelector('#startBtn');
 
-viewScores = document.querySelector('.nav-link');
-
-document.getElementById('view-score').onclick = function() {
+// Not sure how to make the link redirect to a certain <div>
+let viewScore = document.querySelector('#view-score');
+viewScore.onclick = function() {
     qOneEl.style.display = 'none';
     qTwoEl.style.display = 'none';
     qThreeEl.style.display = 'none';
@@ -53,7 +53,6 @@ startBtn.addEventListener('click', function startQuiz() {
     document.getElementById('q1-c4').innerHTML = '<p>D. For Loop</p>';
     
     document.getElementById('q1-c1').onclick = function() {
-        score--;
         alert('Sorry, that was incorrect.');
         qOneEl.style.display = 'none';
         qTwoEl.style.display = 'contents';
@@ -65,13 +64,11 @@ startBtn.addEventListener('click', function startQuiz() {
         qTwoEl.style.display = 'contents';
      };
     document.getElementById('q1-c3').onclick = function() {
-        score--;
         alert('Sorry, that was incorrect.');
         qOneEl.style.display = 'none';
         qTwoEl.style.display = 'contents';
      };
     document.getElementById('q1-c4').onclick = function() {
-        score--;
         alert('Sorry, that was incorrect.');
         qOneEl.style.display = 'none';
         qTwoEl.style.display = 'contents';
@@ -91,19 +88,16 @@ startBtn.addEventListener('click', function startQuiz() {
         qThreeEl.style.display = 'contents';
      };
     document.getElementById('q2-c2').onclick = function() {
-        score--;
         alert('Sorry, that was incorrect.');
         qTwoEl.style.display = 'none';
         qThreeEl.style.display = 'contents';
      };
     document.getElementById('q2-c3').onclick = function() {
-        score--;
         alert('Sorry, that was incorrect.');
         qTwoEl.style.display = 'none';
         qThreeEl.style.display = 'contents';
      };
     document.getElementById('q2-c4').onclick = function() {
-        score--;
         alert('Sorry, that was incorrect.');
         qTwoEl.style.display = 'none';
         qThreeEl.style.display = 'contents';
@@ -117,19 +111,16 @@ startBtn.addEventListener('click', function startQuiz() {
     document.getElementById('q3-c4').innerHTML = '<p>D. Variable</p>';
 
     document.getElementById('q3-c1').onclick = function() {
-        score--;
         alert('Sorry, that was incorrect.');
         qThreeEl.style.display = 'none';
         qFourEl.style.display = 'contents';
      };
     document.getElementById('q3-c2').onclick = function() {
-        score--;
         alert('Sorry, that was incorrect.');
         qThreeEl.style.display = 'none';
         qFourEl.style.display = 'contents';
      };
     document.getElementById('q3-c3').onclick = function() {
-        score--;
         alert('Sorry, that was incorrect.');
         qThreeEl.style.display = 'none';
         qFourEl.style.display = 'contents';
@@ -155,19 +146,16 @@ startBtn.addEventListener('click', function startQuiz() {
         qFiveEl.style.display = 'contents';
      };
     document.getElementById('q4-c2').onclick = function() {
-        score--;
         alert('Sorry, that was incorrect.');
         qFourEl.style.display = 'none';
         qFiveEl.style.display = 'contents';
      };
     document.getElementById('q4-c3').onclick = function() {
-        score--;
         alert('Sorry, that was incorrect.');
         qFourEl.style.display = 'none';
         qFiveEl.style.display = 'contents';
      };
     document.getElementById('q4-c4').onclick = function() {
-        score--;
         alert('Sorry, that was incorrect.');
         qFourEl.style.display = 'none';
         qFiveEl.style.display = 'contents';
@@ -181,32 +169,29 @@ startBtn.addEventListener('click', function startQuiz() {
     document.getElementById('q5-c4').innerHTML = '<p>D. Array</p>';
 
     document.getElementById('q5-c1').onclick = function() {
-        score--;
         alert('Sorry, that was incorrect.');
         qFiveEl.style.display = 'none';
         scoreEl.style.display = 'contents';
-        alert('Congrats! You answered ' + score + ' question(s) correctly.');
+        alert('You answered ' + score + ' question(s) correctly.');
      };
     document.getElementById('q5-c2').onclick = function() {
-        score--;
         alert('Sorry, that was incorrect.');
         qFiveEl.style.display = 'none';
         scoreEl.style.display = 'contents';
-        alert('Congrats! You answered ' + score + ' question(s) correctly.');
+        alert('You answered ' + score + ' question(s) correctly.');
      };
     document.getElementById('q5-c3').onclick = function() {
         score++;
         alert('CORRECT!');
         qFiveEl.style.display = 'none';
         scoreEl.style.display = 'contents';
-        alert('Congrats! You answered ' + score + ' question(s) correctly.');
+        alert('You answered ' + score + ' question(s) correctly.');
      };
     document.getElementById('q5-c4').onclick = function() {
-        score--;
         alert('Sorry, that was incorrect.');
         qFiveEl.style.display = 'none';
         scoreEl.style.display = 'contents';
-        alert('Congrats! You answered ' + score + ' question(s) correctly.');
+        alert('You answered ' + score + ' question(s) correctly.');
      };
 
     // SCORE & add score to the local storage.
